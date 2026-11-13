@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Баня Ильинская 58</title>
+<meta name="description" content="Баня Ильинская 58: две бани на дровах в деревне Изварино, Москва (Внуково), на 8 и на 15 человек. Ильинская ул., 58. Тел. +7 (926) 626-25-86. Ежедневно 11:00–00:00.">
+<link rel="icon" type="image/png" href="logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#13100d; --bg2:#1a1511; --panel:#211a14; --wood:#2b2118;
+  --line:rgba(240,225,200,.12); --text:#efe6d8; --muted:#a99a89;
+  --amber:#d98a3d; --amber2:#f0b36a; --paper:#ece3d2; --ink:#241a12; --ink2:#6a5a49;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:.01em}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+svg.i{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.eyebrow{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--amber2);font-weight:600}
+[hidden]{display:none!important}
+
+/* шапка */
+header{position:sticky;top:0;z-index:30;background:rgba(19,16,13,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:94px}
+.logo{text-decoration:none;display:flex;align-items:center;gap:12px;line-height:1.05}
+.logo .lockup{height:78px;width:auto;display:block;transition:transform .4s,opacity .3s}
+.logo:hover .lockup{transform:scale(1.05)}
+.logo .lt{display:flex;flex-direction:column}
+.logo b{font-family:'Cormorant Garamond';font-size:24px;letter-spacing:.1em;font-weight:700;white-space:nowrap}
+.logo small{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--amber2)}
+nav{display:flex;gap:4px;margin-left:auto}
+nav a{text-decoration:none;font-size:14.5px;font-weight:500;padding:8px 14px;color:var(--muted);position:relative;transition:color .25s}
+nav a::after{content:"";position:absolute;left:14px;right:14px;bottom:2px;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+nav a:hover,nav a:focus-visible,nav a.on{color:var(--text)}
+nav a:hover::after,nav a:focus-visible::after,nav a.on::after{transform:scaleX(1)}
+.tel{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:600;font-size:15px;padding:10px 18px;border:1px solid var(--amber);color:var(--amber2);border-radius:8px;transition:.25s;white-space:nowrap}
+.tel:hover,.tel:focus-visible{background:var(--amber);color:#1b120a;box-shadow:0 6px 22px rgba(217,138,61,.35)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(ellipse 70% 60% at 50% 115%,rgba(217,138,61,.32),transparent 70%),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 2px,transparent 2px 86px),
+  linear-gradient(180deg,#1b1510,#13100d)}
+.hero .wrap{padding-top:84px}
+.status{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;padding:7px 14px;border:1px solid var(--line);border-radius:30px;background:rgba(255,255,255,.04)}
+.dot{width:8px;height:8px;border-radius:50%;background:#888}
+.status.open .dot{background:#4cbf6b;box-shadow:0 0 0 0 rgba(76,191,107,.6);animation:pulse 2s infinite}
+.status.closed .dot{background:#d9573d}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(76,191,107,0)}100%{box-shadow:0 0 0 0 rgba(76,191,107,0)}}
+.hero h1{font-size:clamp(48px,8vw,104px);margin:22px 0 18px;max-width:900px}
+.hero h1 span{color:var(--amber2);font-style:italic;font-weight:500}
+.hero .lead{font-size:18.5px;color:var(--muted);max-width:620px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:16px;padding:15px 26px;border-radius:8px;transition:.25s;border:1px solid transparent}
+.btn.main{background:var(--amber);color:#1b120a}
+.btn.main:hover,.btn.main:focus-visible{background:var(--amber2);transform:translateY(-3px);box-shadow:0 12px 30px rgba(217,138,61,.4)}
+.btn.ghost{border-color:rgba(240,225,200,.35);color:var(--text)}
+.btn.ghost:hover,.btn.ghost:focus-visible{border-color:var(--amber2);color:var(--amber2);transform:translateY(-3px)}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border:1px solid var(--line);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:rgba(26,21,17,.85);backdrop-filter:blur(4px)}
+.strip div{padding:22px 24px;border-right:1px solid var(--line);transition:background .3s;display:flex;gap:14px;align-items:center}
+.strip div:last-child{border-right:0}
+.strip div:hover{background:rgba(217,138,61,.1)}
+.strip .i{font-size:26px;color:var(--amber2)}
+.strip b{display:block;font-size:17px;font-weight:600}
+.strip small{color:var(--muted);font-size:13px}
+
+/* секции */
+section{padding:86px 0}
+.head{margin-bottom:34px;max-width:660px}
+.head h2{font-size:clamp(36px,5vw,56px);margin-top:10px}
+.head p{color:var(--muted);margin-top:12px}
+
+/* выбор бани */
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:34px}
+.tab{display:flex;align-items:center;gap:18px;text-align:left;padding:20px 24px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel);transition:.3s;position:relative;overflow:hidden}
+.tab::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 20% 120%,rgba(217,138,61,.3),transparent 65%);opacity:0;transition:opacity .3s}
+.tab .num{font-family:'Cormorant Garamond';font-size:56px;font-weight:700;line-height:1;color:var(--amber2);position:relative;min-width:72px}
+.tab .t{position:relative}
+.tab b{display:block;font-size:19px;font-weight:600}
+.tab small{color:var(--muted);font-size:14px}
+.tab:hover,.tab:focus-visible{transform:translateY(-4px);border-color:rgba(217,138,61,.6);box-shadow:0 16px 36px rgba(0,0,0,.45)}
+.tab:hover::before{opacity:1}
+.tab[aria-selected="true"]{border-color:var(--amber);background:#2a1f15;box-shadow:inset 0 0 0 1px var(--amber)}
+.tab[aria-selected="true"]::before{opacity:1}
+
+/* прайс-лист (тёмно-коричневый, как весь сайт) */
+.prices{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sub{font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--amber2);margin:34px 0 8px}
+.list{border-top:2px solid var(--amber)}
+.row{display:grid;grid-template-columns:50px 1fr auto;gap:6px 20px;align-items:center;padding:22px 16px;border-bottom:1px solid var(--line);position:relative;transition:.3s}
+.row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--amber);transform:scaleY(0);transition:transform .3s}
+.row:hover,.row:focus-within{background:rgba(217,138,61,.1);padding-left:26px}
+.row:hover::before{transform:scaleY(1)}
+.row .i{font-size:30px;color:var(--amber2);transition:transform .3s}
+.row:hover .i{transform:scale(1.15)}
+.row h3{font-size:30px}
+.row p{color:var(--muted);font-size:15px}
+.row .p{text-align:right;white-space:nowrap}
+.row .p b{font-family:'Cormorant Garamond';font-size:34px;font-weight:700;line-height:1;color:var(--amber2)}
+.row .p small{display:block;color:var(--muted);font-size:13px}
+.list.s .row{padding:16px}
+.list.s .row h3{font-size:25px}
+.list.s .row .p b{font-size:28px}
+.note{margin-top:22px;font-size:14.5px;color:var(--muted)}
+.soon{border:1px dashed rgba(240,225,200,.3);border-radius:var(--r);padding:40px 28px;text-align:center;background:var(--panel)}
+.soon h3{font-size:34px;margin-bottom:8px}
+.soon p{color:var(--muted);max-width:480px;margin:0 auto 20px}
+/* как приехать */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.st{border-left:2px solid var(--amber);padding:6px 0 6px 22px;transition:.3s}
+.st:hover{border-left-width:6px;padding-left:20px}
+.st::before{counter-increment:s;content:"0" counter(s);font-family:'Cormorant Garamond';font-size:38px;color:var(--amber2);display:block;line-height:1}
+.st h3{font-size:26px;margin:8px 0 6px}
+.st p{color:var(--muted);font-size:15.5px}
+
+/* фото */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.shot{position:relative;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);padding:0;display:block;width:100%;background:var(--wood);transition:.35s}
+.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s,filter .4s;filter:brightness(.88)}
+.shot span{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;text-align:left;font-weight:600;font-size:14.5px;background:linear-gradient(transparent,rgba(0,0,0,.78));transition:.3s}
+.shot:hover,.shot:focus-visible{border-color:var(--amber);transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.55)}
+.shot:hover img,.shot:focus-visible img{transform:scale(1.08);filter:none}
+.shot:hover span{padding-bottom:16px;color:var(--amber2)}
+.ph{aspect-ratio:3/4;border:1px dashed var(--line);border-radius:var(--r);background:var(--wood);display:grid;place-items:center;text-align:center;color:var(--muted);transition:.35s}
+.ph .i{font-size:34px;display:block;margin:0 auto 8px;color:var(--amber)}
+.ph small{font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.ph:hover{border-color:var(--amber);color:var(--text);transform:scale(1.03)}
+.lb{position:fixed;inset:0;z-index:80;background:rgba(8,6,4,.95);display:none;align-items:center;justify-content:center;padding:20px}
+.lb.on{display:flex}
+.lb figure{max-width:min(92vw,720px);text-align:center}
+.lb img{max-width:100%;max-height:82vh;border-radius:10px;border:1px solid var(--line)}
+.lb figcaption{margin-top:10px;color:var(--muted)}
+.lb button{position:absolute;color:#fff;font-size:34px;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.08);transition:.25s;line-height:1}
+.lb button:hover{background:var(--amber);color:#1b120a}
+.lb .x{top:18px;right:18px}.lb .pv{left:16px;top:50%;transform:translateY(-50%)}.lb .nx{right:16px;top:50%;transform:translateY(-50%)}
+
+/* контакты */
+.contacts{background:var(--bg2);border-top:1px solid var(--line)}
+.cwrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:stretch}
+.clist{border-top:1px solid var(--line)}
+.c{display:flex;gap:18px;align-items:center;padding:19px 14px;border-bottom:1px solid var(--line);text-decoration:none;transition:.3s;position:relative}
+.c .i{font-size:26px;color:var(--amber2);transition:.3s}
+.c small{display:block;color:var(--muted);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+.c b{font-size:18px;font-weight:600;display:block}
+a.c:hover,a.c:focus-visible{background:rgba(217,138,61,.1);padding-left:24px}
+a.c:hover .i{transform:scale(1.2)}
+a.c .go{margin-left:auto;color:var(--amber2);font-size:13.5px;font-weight:600;white-space:nowrap}
+.map{display:flex;flex-direction:column;justify-content:flex-end;min-height:360px;border:1px solid var(--line);border-radius:var(--r);text-decoration:none;padding:28px;position:relative;overflow:hidden;transition:.35s;
+  background:
+   radial-gradient(circle at 62% 44%,rgba(217,138,61,.35),transparent 34%),
+   repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 44px),
+   repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 44px),var(--wood)}
+.map .pin{position:absolute;left:56%;top:30%;font-size:54px;color:var(--amber2);filter:drop-shadow(0 6px 10px rgba(0,0,0,.5));transition:transform .4s}
+.map:hover,.map:focus-visible{border-color:var(--amber);box-shadow:0 22px 50px rgba(0,0,0,.5)}
+.map:hover .pin{transform:translateY(-10px) scale(1.15)}
+.map h3{font-size:30px}
+.map p{color:var(--muted);margin:6px 0 16px}
+.map .btn{align-self:flex-start}
+
+footer{background:#0d0b09;color:var(--muted);text-align:center;padding:22px 20px 26px;font-size:13.5px;border-top:1px solid var(--line)}
+footer b{color:var(--amber2);font-weight:600}
+.flogo{width:230px;max-width:70%;height:auto;margin:6px auto 14px;opacity:.9}
+.toast{position:fixed;left:50%;bottom:30px;z-index:90;transform:translate(-50%,24px);opacity:0;pointer-events:none;background:var(--amber);color:#1b120a;font-weight:600;padding:12px 22px;border-radius:8px;box-shadow:0 12px 30px rgba(0,0,0,.5);transition:.3s}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.dock{display:none}
+
+@media (max-width:900px){
+  nav{display:none}
+  .bar{justify-content:space-between}
+  .tel{padding:9px 14px;font-size:14px}
+  .logo b{font-size:17px;letter-spacing:.06em;line-height:1.05}
+  .logo b span{display:block}
+  .bar{height:82px}
+  .logo .lockup{height:64px}
+  .logo .lt{display:none}
+  .logo small{display:none}
+  section{padding:58px 0}
+  .hero .wrap{padding-top:48px}
+  .strip{grid-template-columns:1fr 1fr;margin-top:44px}
+  .strip div:nth-child(2){border-right:0}
+  .strip div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .strip div{padding:16px}
+  .steps{grid-template-columns:1fr}
+  .tabs{gap:10px}
+  .tab{flex-direction:column;align-items:flex-start;gap:6px;padding:16px}
+  .tab .num{font-size:46px}
+  .row{grid-template-columns:40px 1fr;padding:18px 8px}
+  .row .p{grid-column:2;text-align:left}
+  .row:hover{padding-left:8px}
+  .gal{grid-template-columns:1fr 1fr;gap:10px}
+  .cwrap{grid-template-columns:1fr}
+  .map{min-height:280px}
+  body{padding-bottom:76px}
+  .dock{display:grid;grid-template-columns:1.3fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 12px;background:rgba(19,16,13,.96);border-top:1px solid var(--line)}
+  .dock a{display:flex;justify-content:center;align-items:center;gap:8px;padding:14px 10px;border-radius:8px;font-weight:600;text-decoration:none;font-size:15.5px}
+  .dock .d1{background:var(--amber);color:#1b120a}
+  .dock .d2{border:1px solid rgba(240,225,200,.35);color:var(--text)}
+  .toast{bottom:92px}
+}
+@media (max-width:480px){.hero h1{font-size:46px}}
+@media (max-width:420px){.tel svg{display:none}.tel{padding:9px 11px;font-size:13px}.logo .lockup{height:56px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="flame" viewBox="0 0 24 24"><path d="M12 2.5c.8 3.6 5 5.6 5 10.6a5 5 0 0 1-10 0c0-2 .9-3.3 2-4.3 0 1.9.9 3 2 3 0-3.8-1.2-5.6 1-9.3z"/></symbol>
+  <symbol id="tub" viewBox="0 0 24 24"><path d="M3 11h18v3a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6v-3z"/><path d="M8 3c0 2 2 2 2 4M13 3c0 2 2 2 2 4M17.5 4c0 1.5 1.5 1.5 1.5 3"/></symbol>
+  <symbol id="leaf" viewBox="0 0 24 24"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15zM5 19l9-9"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></symbol>
+  <symbol id="car" viewBox="0 0 24 24"><path d="M5 16h14v-4l-2-5H7l-2 5v4zM7 16v2M17 16v2"/></symbol>
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8 6.6 19.7l1.1-6.1L3.2 9.4l6.1-.8z"/></symbol>
+  <symbol id="users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6M16 5a3.5 3.5 0 0 1 0 7M18 14c2.2.6 3.5 2.6 3.5 6"/></symbol>
+  <symbol id="cam" viewBox="0 0 24 24"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="3.8"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Баня Ильинская 58"><img class="lockup" src="logo.png" alt="Banya Ilyinskaya"><span class="lt"><b>БАНЯ <span>ИЛЬИНСКАЯ 58</span></b><small>Изварино · Москва</small></span></a>
+    <nav aria-label="Разделы">
+      <a href="#top" data-s="top">Главная</a>
+      <a href="#services" data-s="services">Услуги</a>
+      <a href="#photo" data-s="photo">Фото</a>
+      <a href="#contacts" data-s="contacts">Контакты</a>
+    </nav>
+    <a class="tel" href="tel:+79266262586" data-phone><svg class="i"><use href="#phone"/></svg>+7 (926) 626-25-86</a>
+  </div>
+</header>
+
+<main>
+  <!-- ГЛАВНАЯ -->
+  <div class="hero" id="top">
+    <div class="wrap">
+      <div class="eyebrow" style="margin-bottom:14px">Баня Ильинская 58 · Изварино, Москва</div>
+      <span class="status" id="status"><i class="dot"></i><span id="statusText">Ежедневно 11:00–00:00</span></span>
+      <h1>Баня на дровах <span>с чаном и бассейном</span></h1>
+      <p class="lead">Две бани по одному адресу: на 8 и на 15 человек. Русская парная, чан с тёплой водой и бассейн. Деревня Изварино, район Внуково, Москва. Вокруг лес.</p>
+      <div class="cta">
+        <a class="btn main" href="tel:+79266262586" data-phone><svg class="i"><use href="#phone"/></svg>Позвонить: +7 (926) 626-25-86</a>
+        <a class="btn ghost" href="https://yandex.ru/maps/org/banya/88831681996/" target="_blank" rel="noopener"><svg class="i"><use href="#pin"/></svg>Открыть на Яндекс Картах</a>
+      </div>
+      <div class="strip">
+        <div><svg class="i"><use href="#clock"/></svg><span><b>11:00–00:00</b><small>Ежедневно</small></span></div>
+        <div><svg class="i"><use href="#star"/></svg><span><b>5,0</b><small>На Яндекс Картах</small></span></div>
+        <div><svg class="i"><use href="#users"/></svg><span><b>Две бани</b><small>8 и 15 человек</small></span></div>
+        <div><svg class="i"><use href="#car"/></svg><span><b>Парковка</b><small>И Wi-Fi</small></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- УСЛУГИ -->
+  <section class="prices" id="services">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Услуги и стоимость</span>
+        <h2>Выберите баню</h2>
+        <p>Две бани по одному адресу. Выберите нужную, чтобы увидеть цены и фото.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Выбор бани">
+        <button class="tab" role="tab" data-b="8" aria-selected="true"><span class="num">8</span><span class="t"><b>Баня на 8 человек</b><small>цены и услуги</small></span></button>
+        <button class="tab" role="tab" data-b="15" aria-selected="false"><span class="num">15</span><span class="t"><b>Баня на 15 человек</b><small>цены и услуги</small></span></button>
+      </div>
+
+      <!-- Баня на 8 -->
+      <div data-panel="8">
+        <div class="sub" style="margin-top:0">Баня и чан</div>
+        <div class="list">
+          <div class="row" tabindex="0"><svg class="i"><use href="#flame"/></svg><div><h3>Парная · будние дни</h3><p>Русская парная на дровах. Цена за час.</p></div><div class="p"><b>3 000 ₽</b><small>за час</small></div></div>
+          <div class="row" tabindex="0"><svg class="i"><use href="#flame"/></svg><div><h3>Парная · выходные</h3><p>Русская парная на дровах. Цена за час.</p></div><div class="p"><b>4 000 ₽</b><small>за час</small></div></div>
+          <div class="row" tabindex="0"><svg class="i"><use href="#tub"/></svg><div><h3>Чан</h3><p>Чан на открытом воздухе с тёплой водой, топится дровами.</p></div><div class="p"><b>5 000 ₽</b><small>за всё время</small></div></div>
+        </div>
+
+        <div class="sub">Дополнительно: веники</div>
+        <div class="list s">
+          <div class="row" tabindex="0"><svg class="i"><use href="#leaf"/></svg><div><h3>Дубовый веник</h3></div><div class="p"><b>600 ₽</b></div></div>
+          <div class="row" tabindex="0"><svg class="i"><use href="#leaf"/></svg><div><h3>Берёзовый веник</h3></div><div class="p"><b>500 ₽</b></div></div>
+          <div class="row" tabindex="0"><svg class="i"><use href="#leaf"/></svg><div><h3>Пихтовый веник</h3></div><div class="p"><b>500 ₽</b></div></div>
+        </div>
+        <p class="note">Бассейн, мангальная зона и дом: условия уточняйте по телефону <a href="tel:+79266262586" data-phone style="border-bottom:1.5px solid var(--amber);text-decoration:none">+7 (926) 626-25-86</a>. Оплата: предоплата, наличные, карта, онлайн.</p>
+      </div>
+
+      <!-- Баня на 15 -->
+      <div data-panel="15" hidden>
+        <div class="sub" style="margin-top:0">Баня и купель</div>
+        <div class="list">
+          <div class="row" tabindex="0"><svg class="i"><use href="#flame"/></svg><div><h3>Парная · будние дни</h3><p>Русская парная на дровах. Цена за час.</p></div><div class="p"><b>4 000 ₽</b><small>за час</small></div></div>
+          <div class="row" tabindex="0"><svg class="i"><use href="#flame"/></svg><div><h3>Парная · выходные</h3><p>Русская парная на дровах. Цена за час.</p></div><div class="p"><b>5 000 ₽</b><small>за час</small></div></div>
+          <div class="row" tabindex="0"><svg class="i"><use href="#tub"/></svg><div><h3>Горячая купель с гидромассажем</h3><p>Купель на открытом воздухе с гидромассажем.</p></div><div class="p"><b>5 000 ₽</b><small>за всё время</small></div></div>
+        </div>
+
+        <div class="sub">Дополнительно: веники</div>
+        <div class="list s">
+          <div class="row" tabindex="0"><svg class="i"><use href="#leaf"/></svg><div><h3>Дубовый веник</h3></div><div class="p"><b>600 ₽</b></div></div>
+          <div class="row" tabindex="0"><svg class="i"><use href="#leaf"/></svg><div><h3>Берёзовый веник</h3></div><div class="p"><b>500 ₽</b></div></div>
+          <div class="row" tabindex="0"><svg class="i"><use href="#leaf"/></svg><div><h3>Пихтовый веник</h3></div><div class="p"><b>500 ₽</b></div></div>
+        </div>
+        <p class="note">Другие услуги и условия уточняйте по телефону <a href="tel:+79266262586" data-phone style="border-bottom:1.5px solid var(--amber);text-decoration:none">+7 (926) 626-25-86</a>. Оплата: предоплата, наличные, карта, онлайн.</p>
+    </div>
+  </section>
+
+  <!-- КАК ПРИЕХАТЬ -->
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Бронирование</span>
+        <h2>Как приехать в баню</h2>
+      </div>
+      <div class="steps">
+        <div class="st"><h3>Позвоните</h3><p>+7 (926) 626-25-86, ежедневно с 11:00 до 00:00.</p></div>
+        <div class="st"><h3>Внесите предоплату</h3><p>Принимаем наличные, карты и онлайн-оплату.</p></div>
+        <div class="st"><h3>Приезжайте</h3><p>Деревня Изварино, Ильинская ул., 58. Есть парковка.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ФОТО -->
+  <section id="photo" style="background:var(--bg2);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Галерея</span>
+        <h2>Фотогалерея</h2>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Выбор бани для фото">
+        <button class="tab" role="tab" data-b="8" aria-selected="true"><span class="num">8</span><span class="t"><b>Баня на 8 человек</b><small>8 фото</small></span></button>
+        <button class="tab" role="tab" data-b="15" aria-selected="false"><span class="num">15</span><span class="t"><b>Баня на 15 человек</b><small>16 фото</small></span></button>
+      </div>
+
+      <div data-panel="8">
+        <div class="gal" id="gal8"></div>
+      </div>
+      <div data-panel="15" hidden>
+        <div class="gal" id="gal15"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section id="contacts" class="contacts">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Как нас найти</span>
+        <h2>Контакты</h2>
+      </div>
+      <div class="cwrap">
+        <div class="clist">
+          <a class="c" href="tel:+79266262586" data-phone><svg class="i"><use href="#phone"/></svg><span><small>Телефон</small><b>+7 (926) 626-25-86</b></span><span class="go">Позвонить</span></a>
+          <a class="c" href="https://yandex.ru/maps/org/banya/88831681996/" target="_blank" rel="noopener"><svg class="i"><use href="#pin"/></svg><span><small>Адрес</small><b>Москва, д. Изварино, Ильинская ул., 58</b></span><span class="go">На карте</span></a>
+          <div class="c"><svg class="i"><use href="#clock"/></svg><span><small>Режим работы</small><b>Ежедневно с 11:00 до 00:00</b></span></div>
+          <div class="c"><svg class="i"><use href="#card"/></svg><span><small>Оплата</small><b>Предоплата, наличные, карта, онлайн</b></span></div>
+          <div class="c"><svg class="i"><use href="#car"/></svg><span><small>Удобства</small><b>Парковка, Wi-Fi</b></span></div>
+          <div class="c"><svg class="i"><use href="#star"/></svg><span><small>Рейтинг на Яндекс Картах</small><b>5,0</b></span></div>
+        </div>
+        <a class="map" href="https://yandex.ru/maps/org/banya/88831681996/" target="_blank" rel="noopener" aria-label="Открыть на Яндекс Картах">
+          <svg class="i pin"><use href="#pin"/></svg>
+          <h3>Показать на карте</h3>
+          <p>Москва, д. Изварино, Ильинская ул., 58</p>
+          <span class="btn main"><svg class="i"><use href="#pin"/></svg>Открыть Яндекс Карты</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><img class="flogo" src="logo.png" alt="Banya Ilyinskaya"><br>Это демо-версия сайта. При надобности все надписи будут удалены. Создатель <b>@broodaholic</b></footer>
+
+<div class="dock">
+  <a class="d1" href="tel:+79266262586" data-phone><svg class="i"><use href="#phone"/></svg>Позвонить</a>
+  <a class="d2" href="https://yandex.ru/maps/org/banya/88831681996/" target="_blank" rel="noopener"><svg class="i"><use href="#pin"/></svg>На карте</a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Фото">
+  <button class="x" aria-label="Закрыть">×</button>
+  <button class="pv" aria-label="Назад">‹</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button class="nx" aria-label="Вперёд">›</button>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+// открыто / закрыто сейчас (график 11:00–00:00, московское время)
+try{
+  const h=+new Intl.DateTimeFormat('ru-RU',{hour:'numeric',hour12:false,timeZone:'Europe/Moscow'}).format(new Date())%24;
+  const open=h>=11;
+  document.getElementById('status').classList.add(open?'open':'closed');
+  document.getElementById('statusText').textContent=open?'Сейчас открыто · до 00:00':'Сейчас закрыто · откроемся в 11:00';
+}catch(e){}
+
+// телефон: на смартфоне звонок сразу; на компьютере звонить нечем — копируем номер
+const isPhone=()=>/Android|iPhone|iPad|iPod|Mobile|Windows Phone/i.test(navigator.userAgent)
+  ||(navigator.maxTouchPoints>1&&/Mac/i.test(navigator.platform))
+  ||matchMedia('(pointer:coarse)').matches||matchMedia('(hover:none)').matches;
+const toast=document.getElementById('toast');
+function showToast(t){toast.textContent=t;toast.classList.add('on');clearTimeout(showToast.t);showToast.t=setTimeout(()=>toast.classList.remove('on'),2400)}
+document.querySelectorAll('a[data-phone]').forEach(a=>a.addEventListener('click',e=>{
+  if(isPhone())return;
+  e.preventDefault();
+  const num='+7 (926) 626-25-86';
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(num).then(()=>showToast('Номер скопирован: '+num),()=>showToast('Номер: '+num));
+  }else showToast('Номер: '+num);
+}));
+
+// выбор бани: переключает цены и фото одновременно
+function selectBanya(b){
+  document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',String(t.dataset.b===b)));
+  document.querySelectorAll('[data-panel]').forEach(p=>{p.hidden=p.dataset.panel!==b});
+}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>selectBanya(t.dataset.b)));
+
+// фотогалереи обеих бань
+const sets={
+  8:[
+    ['img8/photo5.jpg','Парная'],['img8/photo8.jpg','Чан'],['img8/photo7.jpg','Бассейн'],['img8/photo4.jpg','Дом и бассейн'],
+    ['img8/photo3.jpg','Терраса и бассейн'],['img8/photo2.jpg','Мангальная зона'],['img8/photo6.jpg','Зона отдыха'],['img8/photo1.jpg','Кухня']
+  ],
+  15:[
+    ['img15/photo9.jpg','Парная'],['img15/photo1.jpg','Горячая купель'],['img15/photo11.jpg','Парная'],['img15/photo3.jpg','Зал'],
+    ['img15/photo6.jpg','Мангальная зона'],['img15/photo2.jpg','Двор'],['img15/photo4.jpg','Зал'],['img15/photo5.jpg','Зал'],
+    ['img15/photo10.jpg','Парная'],['img15/photo12.jpg','Парная'],['img15/photo16.jpg','Парная'],['img15/photo7.jpg','Холл'],
+    ['img15/photo14.jpg','Кухня'],['img15/photo15.jpg','Шампуры и решётки'],['img15/photo13.jpg','Интерьер'],['img15/photo8.jpg','Санузел']
+  ]
+};
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img'),lbc=lb.querySelector('figcaption');
+let cur=0,list=sets[8];
+function show(i){cur=(i+list.length)%list.length;lbi.src=list[cur][0];lbi.alt=list[cur][1];lbc.textContent=list[cur][1]+' · '+(cur+1)+' из '+list.length;lb.classList.add('on')}
+Object.keys(sets).forEach(k=>{
+  const gal=document.getElementById('gal'+k);
+  sets[k].forEach((p,i)=>{
+    const b=document.createElement('button');b.className='shot';b.type='button';b.setAttribute('aria-label','Открыть фото: '+p[1]);
+    const im=new Image();im.src=p[0];im.alt=p[1];im.loading='lazy';
+    const s=document.createElement('span');s.textContent=p[1];
+    b.append(im,s);b.addEventListener('click',()=>{list=sets[k];show(i)});gal.appendChild(b);
+  });
+});
+lb.querySelector('.x').onclick=()=>lb.classList.remove('on');
+lb.querySelector('.pv').onclick=e=>{e.stopPropagation();show(cur-1)};
+lb.querySelector('.nx').onclick=e=>{e.stopPropagation();show(cur+1)};
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('on')});
+addEventListener('keydown',e=>{
+  if(!lb.classList.contains('on'))return;
+  if(e.key==='Escape')lb.classList.remove('on');
+  if(e.key==='ArrowLeft')show(cur-1);
+  if(e.key==='ArrowRight')show(cur+1);
+});
+// подсветка текущего раздела в меню
+try{
+  const links=[...document.querySelectorAll('nav a')];
+  const io=new IntersectionObserver(es=>es.forEach(en=>{
+    if(en.isIntersecting)links.forEach(l=>l.classList.toggle('on',l.dataset.s===en.target.id))
+  }),{rootMargin:'-40% 0px -55% 0px'});
+  ['top','services','photo','contacts'].map(i=>document.getElementById(i)).forEach(el=>el&&io.observe(el));
+}catch(e){}
+</script>
+</body>
+</html>
